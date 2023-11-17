@@ -26,19 +26,18 @@
 
       var unityI=null;
       
-      script.onload = () => {
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-          dataUrl: "Build/porter-3d-vk.data.unityweb",
-          frameworkUrl: "Build/porter-3d-vk.framework.js.unityweb",
-          codeUrl: "Build/porter-3d-vk.wasm.unityweb",
-          streamingAssetsUrl: "StreamingAssets",
-          companyName: "DefaultCompany",
-          productName: "MoveHouse-clone",
-          productVersion: "0.1",
-          // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-          // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-        }).then((unityInstance) => unityI = unityInstance);
-      }
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/porter-3d-vk.data.unityweb",
+        frameworkUrl: "Build/porter-3d-vk.framework.js.unityweb",
+        codeUrl: "Build/porter-3d-vk.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "MoveHouse-clone",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((unityInstance) => unityI = unityInstance);
+      
     </script>
 
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
