@@ -48,12 +48,12 @@
 
 
 
-      /*function auth(){
+      function auth(){
         vkBridge.send('VKWebAppGetUserInfo').then(_info =>{
           console.log(_info);
-          unityI.SendMessage('VKSDK', 'AuthenticateSuccess', JSON.stringify(_info));
+          //unityI.SendMessage('VKSDK', 'AuthenticateSuccess', JSON.stringify(_info));
         });
-      }*/
+      }
 
       function getUserData(){
         vkBridge.send("VKWebAppStorageGet",{"keys":["_save"]}).then(data =>{
