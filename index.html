@@ -67,6 +67,24 @@
           console.log("Saved!")});
       }
 
+      function makeRepost(){
+        console.log("repost");
+        vkBridge.send('VKWebAppShowWallPostBox', {
+              message: 'Посмотри мой результат в игре Грузчик 3D!',
+              attachments: 'https://vk.com/app51795315_337303019'
+              })
+              .then((data) => {
+                if (data.post_id) {
+                  // Запись размещена
+                  console.log ("ok");
+                }
+              })
+              .catch((error) => {
+                // Ошибка
+                console.log(error);
+              });
+      }
+
     </script>
   </body>
 </html>
