@@ -85,6 +85,19 @@
               });
       }
 
+      function showLeaderBoard(){
+        bridge.send("VKWebAppShowLeaderBoardBox")
+        .then( (data) => {
+          if (data.success) {
+              // Диалоговое окно было показано
+              // ...
+          }
+        })
+        .catch( (error) => {
+          console.log(error); // Ошибка
+        });
+      }
+
     </script>
   </body>
 </html>
