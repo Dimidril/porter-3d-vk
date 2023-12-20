@@ -57,14 +57,15 @@
 
       function getUserData(){
         vkBridge.send("VKWebAppStorageGet",{"keys":["_save"]}).then(data =>{
-        console.log(data);
-        unityI.SendMessage('VKSDK', 'SetScoreData', JSON.stringify(data));
+          console.log(data);
+          unityI.SendMessage('VKSDK', 'SetScoreData', data.key);
       });}
 
       function setUserData(data){
         console.log(data);
         vkBridge.send('VKWebAppStorageSet',{"key": "_save" , "value": data}).then(_info =>{
-          console.log("Saved!")});
+          console.log(_info)
+        });
       }
 
       function makeRepost(){
