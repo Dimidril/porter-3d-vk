@@ -86,7 +86,7 @@
       }
 
       function showLeaderBoard(){
-        bridge.send("VKWebAppShowLeaderBoardBox")
+        vkBridge.send("VKWebAppShowLeaderBoardBox")
         .then( (data) => {
           if (data.success) {
               // Диалоговое окно было показано
