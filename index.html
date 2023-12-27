@@ -101,17 +101,17 @@
       }
 
       function showAd(){
-        bridge.send('VKWebAppShowBannerAd', {
-        banner_location: 'bottom'
-        }).then((data) => { 
+        bridge.send('VKWebAppShowNativeAds', {
+        ad_format: 'interstitial' /* Тип рекламы */
+        })
+        .then( (data) => { 
           if (data.result) {
-            // Баннерная реклама отобразилась
+            // Реклама была показана
+          } else {
+            // Ошибка
           }
         })
-        .catch((error) => {
-          // Ошибка
-          console.log(error);
-        });
+        .catch((error) => { console.log(error); });
       }
 
     </script>
