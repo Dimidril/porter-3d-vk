@@ -102,7 +102,8 @@
 
       function showAd(){
         vkBridge.send('VKWebAppShowBannerAd', {
-        banner_location: 'bottom'
+        banner_location: 'bottom',
+        layout_type: 'resize'
         }).then((data) => { 
           if (data.result) {
             // Баннерная реклама отобразилась
