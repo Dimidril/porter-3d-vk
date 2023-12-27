@@ -62,6 +62,7 @@
       });}
 
       function setUserData(data){
+        data = JSON.stringify(data)
         console.log(data);
         vkBridge.send('VKWebAppStorageSet',{"key": "_save" , "value": data}).then(_info =>{
           console.log(_info)
