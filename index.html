@@ -101,7 +101,7 @@
       }
 
       function showAd(){
-        bridge.send('VKWebAppShowNativeAds', {
+        vkBridge.send('VKWebAppShowNativeAds', {
         ad_format: 'interstitial' /* Тип рекламы */
         })
         .then( (data) => { 
